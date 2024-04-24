@@ -1,0 +1,28 @@
+h1 {
+    text-align : center ;
+    color: black;
+}
+body {
+  background: #439A86;
+}
+
+form{
+  text-align: center;
+}
+
+.container {
+  width: 500px;
+  height: 350px;
+  padding: 10px;
+  border: 5px solid black;
+  margin-left : auto;
+  margin-right : auto;
+}
+
+.container img {
+  max-width : 100%;
+  max-height : 100%;
+  height : auto ; 
+  margin-left : auto ;
+  margin-right : auto ;
+}
