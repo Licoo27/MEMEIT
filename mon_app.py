@@ -18,12 +18,10 @@ def image():
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        # Récupérer le contenu du formulaire
         texte_saisi = request.form['texte_saisi']
-        # Faire quelque chose avec le texte saisi, comme l'afficher
         return f"Vous avez saisi : {texte_saisi}"
-    # Afficher le formulaire
     return render_template('index.html')
+
 
 if __name__ == '__main__':
   app.run(debug=True)
