@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
+
 
 app = Flask(__name__)
 url = ''
@@ -21,6 +22,18 @@ def index():
         texte_saisi = request.form['texte_saisi']
         return f"Vous avez saisi : {texte_saisi}"
     return render_template('index.html')
+  
+  
+@app.route('/gallery', methods=['GET', 'POST'])
+def gallery():
+  return render_template("gallery.html")
+
+
+@app.route('/sauvegarder', methods=['POST'])
+def sauvegarder():
+    # logique pour sauvegarder les données
+    # Rediriger vers une autre page
+    return redirect(url_for('gallery'))
 
 
 if __name__ == '__main__':
