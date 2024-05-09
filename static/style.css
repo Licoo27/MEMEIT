@@ -18,20 +18,20 @@ form {
   border: 5px solid black;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden; /* Pour cacher le flou qui dépasse */
-  position: relative; /* Pour positionner le flou par rapport au cadre */
+  overflow: hidden; 
+  position: relative; 
 }
 
 .container::before {
   content: "";
   position: absolute;
-  top: -10px; /* Ajustez si nécessaire */
-  left: -10px; /* Ajustez si nécessaire */
+  top: -10px; 
+  left: -10px; 
   width: calc(100% + 20px);
   height: calc(100% + 20px);
   background: inherit;
-  filter: blur(10px); /* Ajustez la valeur pour contrôler l'intensité du flou */
-  z-index: -1; /* Pour placer le flou en dessous du cadre */
+  filter: blur(10px); 
+  z-index: -1; 
 }
 
 .container img {
@@ -42,3 +42,18 @@ form {
   margin-right: auto;
 }
 
+.draggable {
+  position: absolute;
+  cursor: grab;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+
+#content {
+  font-size: 30px; 
+  color : white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
