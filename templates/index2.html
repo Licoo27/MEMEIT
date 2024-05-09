@@ -11,16 +11,11 @@
      <div class="container">
        <img src="{{ image_url }}" alt="image">
      </div>
-     
+
    </body>
-   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zone de Texte</title>
-</head>
 <body>
     <h1>Entrez votre description  :</h1>
-    <form method="GET">
+    <form action="{{ url_for('texte') }}" method="POST">
         <textarea name="texte_saisi" rows="2" cols="50"></textarea><br>
         <input type="submit" value="Envoyer">
     </form>
@@ -29,7 +24,4 @@
   <input type="submit" value="Sauvegarder">
   
 </form>
-<body>
-
-</body>
 </html>
