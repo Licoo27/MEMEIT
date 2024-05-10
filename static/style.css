@@ -13,33 +13,23 @@ form {
 
 .container {
   width: 500px;
-  height: auto;
+  height: 500px; /* ou toute autre hauteur désirée */
   padding: 10px;
   border: 5px solid black;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden; 
   position: relative; 
-}
-
-.container::before {
-  content: "";
-  position: absolute;
-  top: -10px; 
-  left: -10px; 
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
-  background: inherit;
-  filter: blur(10px); 
-  z-index: -1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container img {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%; /* Pour que l'image prenne toute la largeur du conteneur */
+  height: 100%; /* Pour que l'image prenne toute la hauteur du conteneur */
+  object-fit: cover; /* Pour que l'image couvre toute la zone disponible */
+  object-position: center; /* Pour centrer l'image dans le conteneur */
 }
 
 .draggable {
