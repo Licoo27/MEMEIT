@@ -15,6 +15,7 @@
        <img src="{{ image_url }}" alt="image">
        <div id="draggable" class="draggable">
         <div id="content">{{texte_saisi}}</div>
+        <button class="btn">Sauvegarder</button>
        </div>
      </div>
     
@@ -52,6 +53,28 @@
          // Appel de la fonction pour rendre draggable l'élément avec l'ID "draggable"
          makeDraggable(document.getElementById('draggable'));
      </script>
+     
+     <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".btn").on("click", function() {
+                html2canvas(document.querySelector(".container")).then(function(canvas) {
+                    var imageData = canvas.toDataURL("image/png");
+
+                    var link = document.createElement('a');
+                    link.href = imageData;
+                    link.download = 'screenshot.png';
+
+                    document.body.appendChild(link);
+                    link.click();
+
+                    document.body.removeChild(link);
+                });
+            });
+        });
+    </script>
 
    </body>
 <br></br>
