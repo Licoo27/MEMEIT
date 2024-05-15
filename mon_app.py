@@ -35,12 +35,12 @@ def texte():
 def gallery():
   return render_template("gallery.html")
 
+
 @app.route('/sauvegarder', methods=['POST'])
 def sauvegarder():
   url = request.url_root + 'index3'  # URL de la page à capturer
   screenshot_path = take_screenshot(url)  # Prendre le screenshot de la page
   return send_file(screenshot_path, as_attachment=True)
-
 
 if __name__ == '__main__':
   app.run(debug=True)
