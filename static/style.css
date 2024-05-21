@@ -25,25 +25,27 @@ form {
   align-items: center;
 }
 
-.container img {
+.container img, .container canvas {
   width: 100%; /* Pour que l'image prenne toute la largeur du conteneur */
   height: 100%; /* Pour que l'image prenne toute la hauteur du conteneur */
   object-fit: cover; /* Pour que l'image couvre toute la zone disponible */
   object-position: center; /* Pour centrer l'image dans le conteneur */
 }
 
-.draggable {
+.text-draggable {
   position: absolute;
-  cursor: grab;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+  cursor: move;
+  color: white;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
 #content {
-  font-size: 30px; 
-  color : white;
+  font-size: 30px;
+  color: white;
   font-weight: bold;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
 }
+
