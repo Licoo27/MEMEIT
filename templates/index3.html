@@ -18,6 +18,7 @@
     <div class="text-draggable" id="text1">{{ texte_saisi1 }}</div>
     <div class="text-draggable" id="text2">{{ texte_saisi2 }}</div>
     <button class="btn" id="save-button">Enregistrer</button>
+    <button class="btn" id="send-button">Envoyer au chat</button>
 
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -88,6 +89,34 @@
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
+            });
+
+            $("#send-button").on("click", function() {
+                ctx.font = "30px Roboto";
+                ctx.fillStyle = "white";
+                ctx.textAlign = "center";
+
+                // Get the positions of the texts
+                var text1 = $("#text1");
+                var text2 = $("#text2");
+                ctx.fillText(texteSaisi1, text1.data("x") + text1.width() / 2, text1.data("y") + text1.height() / 2);
+                ctx.fillText(texteSaisi2, text2.data("x") + text2.width() / 2, text2.data("y") + text2.height() / 2);
+
+                var memeData = canvas.toDataURL("image/png");
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/send_meme',
+                    data: {
+                        meme: memeData
+                    },
+                    success: function(response) {
+                        window.location.href = "/messages";
+                    },
+                    error: function(error) {
+                        console.log("Error sending meme:", error);
+                    }
+                });
             });
         });
     </script>
