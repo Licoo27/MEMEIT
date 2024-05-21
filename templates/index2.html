@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEME_IT</title>
+    <title>MEMEIT</title>
     <link href="/static/style.css" rel="stylesheet">
-  </head>
-   <body>
-     <h1> MEMEIT</h1>
-     <div class="container">
-       <img src="{{ image_url }}" alt="image">
-     </div>
-
-   </body>
+</head>
 <body>
-    <h1>Entrez votre description  :</h1>
+    <h1>MEMEIT</h1>
+    <div class="container">
+        <img src="{{ image_url }}" alt="image">
+    </div>
+    <h1>Entrez vos descriptions :</h1>
     <form action="{{ url_for('texte') }}" method="POST">
-        <textarea name="texte_saisi" rows="2" cols="50"></textarea><br>
+        <label for="texte_saisi1">Texte 1 :</label><br>
+        <textarea name="texte_saisi1" rows="2" cols="50"></textarea><br><br>
+        <label for="texte_saisi2">Texte 2 :</label><br>
+        <textarea name="texte_saisi2" rows="2" cols="50"></textarea><br><br>
         <input type="submit" value="Next">
     </form>
 </body>
 </html>
+
