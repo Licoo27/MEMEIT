@@ -49,4 +49,18 @@ form {
   font-family: 'Roboto', sans-serif;
 }
 
+nav ul li{
+  list-style-type: none;
 
+}
+ul li a{
+  color: #fff;
+}
+ul li a:hover {
+  color: #808080;
+  text-decoration: underline;
+}
+.menu li q{
+  text-decoration: none;
+
+}
