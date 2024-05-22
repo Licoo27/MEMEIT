@@ -11,14 +11,22 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
+    <nav>
+        <ul class="menu">
+            <li>
+                <a href="/">Accueil</a>      
+            </li>
+        </ul>
+    </nav>
     <h1>MEMEIT</h1>
     <div class="container">
-        <canvas id="meme-canvas"></canvas>
+        <canvas id="meme-canvas"></canvas>S
     </div>
     <div class="text-draggable" id="text1">{{ texte_saisi1 }}</div>
     <div class="text-draggable" id="text2">{{ texte_saisi2 }}</div>
     <button class="btn" id="save-button">Enregistrer</button>
     <button class="btn" id="send-button">Envoyer au chat</button>
+
 
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -120,13 +128,6 @@
             });
         });
     </script>
-    <nav>
-        <ul>
-            <li>
-                 <a href="{{ url_for('exe') }}">Accueil</a>
-            </li>
-        </ul>
-    </nav>
 </body>
 </html>
 
