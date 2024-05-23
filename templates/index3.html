@@ -20,12 +20,15 @@
     </nav>
     <h1>MEMEIT</h1>
     <div class="container">
-        <canvas id="meme-canvas"></canvas>S
+        <canvas id="meme-canvas"></canvas>       
+        <img src="{{ image_url }}" alt="image"> <!-- AJOUT/MODIF -->
     </div>
+
     <div class="text-draggable" id="text1">{{ texte_saisi1 }}</div>
     <div class="text-draggable" id="text2">{{ texte_saisi2 }}</div>
     <button class="btn" id="save-button">Enregistrer</button>
     <button class="btn" id="send-button">Envoyer au chat</button>
+    
 
 
     <!-- JavaScript -->

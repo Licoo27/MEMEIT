@@ -60,7 +60,7 @@ ul li a:hover {
   color: #808080;
   text-decoration: underline;
 }
-.menu li q{
+.menu li a{
   text-decoration: none;
 
 }
